@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "module": "Node16",
+    "target": "ES2022",
+    "outDir": "out",
+    "rootDir": "src",
+
+    "lib": ["ES2022"],
+    "sourceMap": true,
+    "strict": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+
+    // 👇 IMPORTANT: ignore type-checking of library .d.ts files (like lru-cache)
+    "skipLibCheck": true,
+
+    // helpful but optional:
+    "moduleResolution": "node16",
+    "types": ["node", "mocha", "vscode"]
+  },
+
+  // Make sure TS only looks at our source, not node_modules
+  "include": ["src"],
+  "exclude": ["node_modules", ".vscode-test", "out"]
+}
